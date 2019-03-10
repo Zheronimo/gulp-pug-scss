@@ -4,7 +4,8 @@ global.$ = {
     gulp: require('gulp'),
 		del: require('del'),
 		fs: require('fs'),
-	gp: require('gulp-load-plugins')(),
+		unit: require('gulp-css-unit'),
+		gp: require('gulp-load-plugins')(),
     bs: require('browser-sync').create(),
 
     path: {

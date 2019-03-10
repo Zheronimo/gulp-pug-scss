@@ -36,7 +36,7 @@ module.exports = function(){
             .pipe($.gp.autoprefixer({
                 browsers: ['last 10 versions']
 						}))
-						.pipe($.gp.cssunit({
+						.pipe($.unit({
 							type     :    'px-to-rem',
 							rootSize :    16
 						}))
