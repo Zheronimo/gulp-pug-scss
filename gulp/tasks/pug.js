@@ -10,8 +10,8 @@ module.exports = function(){
                 })
             }))
             .pipe($.gp.pug({
-							locals : JSON.parse($.fs.readFileSync('./content.json', 'utf8')),
-              pretty:true
+			    locals : JSON.parse($.fs.readFileSync('./content.json', 'utf8')),
+                pretty:true
             }))
             .on('error', $.gp.notify.onError(function(error) {
                 return {
