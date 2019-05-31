@@ -2,10 +2,10 @@
 
 global.$ = {
     gulp: require('gulp'),
-		del: require('del'),
-		fs: require('fs'),
-		unit: require('gulp-css-unit'),
-		gp: require('gulp-load-plugins')(),
+	del: require('del'),
+	fs: require('fs'),
+	unit: require('gulp-css-unit'),
+	gp: require('gulp-load-plugins')(),
     bs: require('browser-sync').create(),
 
     path: {

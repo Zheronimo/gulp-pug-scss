@@ -30,6 +30,13 @@
     "gulp-tinypng": "^1.0.2"
   },
   "dependencies": {
+<<<<<<< HEAD
     "normalize-scss": "^7.0.1"
+=======
+    "jquery": "^3.3.1",
+    "normalize-scss": "^7.0.0",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
+>>>>>>> 0d9ec35c8a6dbf1b7b18b89a46372faded9f886d
   }
 }
