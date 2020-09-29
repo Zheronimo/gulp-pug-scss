@@ -19,11 +19,11 @@ $.path.tasks.forEach(function (taskPath) {
 
 $.gulp.task('default', $.gulp.series( 
     'clean',
-	$.gulp.parallel('pug', 'sass:dev', 'scripts:lib', 'svg', 'fonts', 'scripts', 'img:dev', 'svg:copy'),
+	$.gulp.parallel('pug', 'sass:dev', 'scripts:lib', 'svg', 'fonts', 'scripts', 'img:dev', 'svg:copy'), 'fontsStyle',
     $.gulp.parallel('watch', 'serve')
 ));
 $.gulp.task('build', $.gulp.series(
     'clean',
-	$.gulp.parallel('pug', 'sass:build', 'scripts:lib', 'svg', 'fonts', 'scripts', 'img:build', 'svg:copy'),
+	$.gulp.parallel('pug', 'sass:build', 'scripts:lib', 'svg', 'fonts', 'scripts', 'img:build', 'svg:copy'), 'fontsStyle',
     $.gulp.parallel('watch', 'serve')
 ));

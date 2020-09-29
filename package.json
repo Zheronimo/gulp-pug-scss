@@ -27,7 +27,9 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
-    "gulp-tinypng": "^1.0.2"
+    "gulp-tinypng": "^1.0.2",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0"
   },
   "dependencies": {
     "normalize-scss": "^7.0.1"

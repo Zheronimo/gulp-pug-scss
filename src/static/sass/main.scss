@@ -1,5 +1,6 @@
 @import 'libs/libs';
 @import 'layout/mixin/mixins';
+@import 'layout/mixin/font-face';
 @import 'layout/fonts';
 @import 'layout/vars';
 
@@ -61,6 +62,17 @@ button {
 
 *, *:before, *:after {
 	box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .wrapper {
