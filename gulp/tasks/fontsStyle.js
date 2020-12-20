@@ -37,10 +37,19 @@ module.exports = function(){
 						break;
 					default:
 						fontweight = 400;
-				}
+				};
+				
+				let fontstyle;
+				switch(true) {
+					case str.includes('italic'):
+						fontstyle = 'italic';
+						break;
+					default:
+						fontstyle = 'normal';
+				};
 				
 				if (c_fontname != fontname) {
-					$.fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", '+ fontweight +');\r\n', cb);
+					$.fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", '+ fontweight +', "' +  fontstyle + '");\r\n', cb);
 				}
 				c_fontname = fontname;
 			}
