@@ -13,8 +13,34 @@ module.exports = function(){
 			for (var i = 0; i < items.length; i++) {
 				let fontname = items[i].split('.');
 				fontname = fontname[0];
+				
+				let fontweight;
+				let weight = fontname.toLowerCase();
+				switch(true) {
+					case weight.includes('thin'):
+						fontweight = 100;
+						break;
+					case weight.includes('light'):
+						fontweight = 300;
+						break;
+					case weight.includes('regular'):
+						fontweight = 400;
+						break;
+					case weight.includes('medium'):
+						fontweight = 500;
+						break;
+					case weight.includes('bold'):
+						fontweight = 700;
+						break;
+					case weight.includes('black'):
+						fontweight = 900;
+						break;
+					default:
+						fontweight = 400;
+				}
+				
 				if (c_fontname != fontname) {
-					$.fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400);\r\n', cb);
+					$.fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", '+ fontweight +');\r\n', cb);
 				}
 				c_fontname = fontname;
 			}
