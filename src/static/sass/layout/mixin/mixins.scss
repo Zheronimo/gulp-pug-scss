@@ -66,6 +66,10 @@
 	overflow: hidden;
 }
 
+@mixin shift($property: all, $duration: .3s, $ease: linear) {
+	transition: $property $duration $ease;
+}
+
 @mixin desktop(){
 	@media screen and (max-width: 1200px){
 		@content;
