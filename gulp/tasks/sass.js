@@ -12,6 +12,7 @@ module.exports = function(){
                 })
             }))
             .pipe($.gp.sass())
+            .pipe($.gp.groupCssMediaQueries())
             .pipe($.gp.autoprefixer({
 							overrideBrowserslist: ['last 10 versions']
             }))
