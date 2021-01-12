@@ -4,7 +4,7 @@
 // 		font-weight: $weight;
 // 		font-style: $style;
 
-// 		@if ($asset-pipeline == true) { 
+// 		@if ($asset-pipeline == true) {
 // 			src: font-url('#{$file-path}.eot');
 // 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
 // 		}
@@ -13,14 +13,14 @@
 // 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
 // 		}
 // 	}
-// }	
-@mixin font-face($font-family, $url, $weight) {
+// }
+@mixin font-face($font-family, $url, $weight, $style) {
   @font-face {
-    font-family: '#{$font-family}';
-    src: url('../fonts/#{$url}.woff2') format('woff2'),
-    url('../fonts/#{$url}.woff') format('woff');
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+      url("../fonts/#{$url}.woff") format("woff");
     font-weight: #{$weight};
     font-display: swap;
-    font-style: normal;
+    font-style: #{$style};
   }
 }
