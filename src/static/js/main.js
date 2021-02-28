@@ -1,6 +1,10 @@
-$(document).ready(function() {
-	svg4everybody({});
+// $(document).ready(function() {
+// 	svg4everybody({});
 
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+	svg4everybody({});
 });
 
 
